@@ -1,9 +1,7 @@
-:: Clear Set
-SET CGO_ENABLED=
-SET GOOS=
-SET GOARCH=
-
 :: Build Windows
+SET CGO_ENABLED=0
+SET GOOS=windows
+SET GOARCH=amd64
 go build args.go
 go build encrypt.go
 go build http.go
