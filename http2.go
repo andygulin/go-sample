@@ -1,17 +1,17 @@
 package main
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/gorilla/mux"
 	"net/http"
 	"time"
-	"encoding/json"
-	"fmt"
 )
 
 /**
 http://localhost:8080/hello
 http://localhost:8080/json
- */
+*/
 func main() {
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/hello", func(writer http.ResponseWriter, request *http.Request) {

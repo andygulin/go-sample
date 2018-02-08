@@ -2,9 +2,9 @@ package main
 
 import (
 	"database/sql"
+	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"time"
-	"fmt"
 )
 
 /**
@@ -16,7 +16,7 @@ CREATE TABLE `user` (
   `createdAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
- */
+*/
 
 func main() {
 	db, _ := sql.Open("mysql", "root:root@tcp(localhost:3306)/test?charset=utf8")
